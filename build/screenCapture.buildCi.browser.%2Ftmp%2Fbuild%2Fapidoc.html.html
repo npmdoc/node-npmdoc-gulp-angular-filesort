@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/klei/gulp-angular-filesort"
-
-    >gulp-angular-filesort (v1.1.1)</a>
+    <a href="https://github.com/klei/gulp-angular-filesort">gulp-angular-filesort (v1.1.1)</a>
 </h1>
 <h4>Automatically sort AngularJS app files depending on module definitions and usage</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.gulp-angular-filesort">module gulp-angular-filesort</a><ol>
 
@@ -114,15 +107,15 @@
 
   return es.through(function collectFilesToSort (file) {
       if(!file.contents) {
-        return this.emit(&#x27;error&#x27;, new PluginError(PLUGIN_NAME, &#x27;File: &#x22;&#x27; + file.relative + &#x27;&#x22; without content. You have to read
-it with gulp.src(..)&#x27;));
+        return this.emit('error', new PluginError(PLUGIN_NAME, 'File: "' + file.relative + '" without content. You have to read
+it with gulp.src(..)'));
       }
 
       var deps;
       try {
         deps = ngDep(file.contents);
       } catch (err) {
-        return this.emit(&#x27;error&#x27;, new PluginError(PLUGIN_NAME, &#x27;Error in parsing: &#x22;&#x27; + file.relative + &#x27;&#x22;, &#x27; + err.message));
+        return this.emit('error', new PluginError(PLUGIN_NAME, 'Error in parsing: "' + file.relative + '", ' + err.message));
       }
 
       if (deps.modules) {
@@ -150,14 +143,14 @@ it with gulp.src(..)&#x27;));
 
     }, function afterFileCollection () {
       // Convert all module names to actual files with declarations:
-      for (var i = 0; i &#x3c; toSort.length; i++) {
+      for (var i = 0; i &lt; toSort.length; i++) {
         var moduleName = toSort[i][1];
         var declarationFile = angmods[moduleName];
         if (declarationFile) {
           toSort[i][1] = declarationFile;
         } else {
           // Depending on module outside stream (possibly a 3rd party one),
-          // don&#x27;t care when sorting:
+          // don't care when sorting:
           toSort.splice(i--, 1);
         }
       }
@@ -166,10 +159,10 @@ it with gulp.src(..)&#x27;));
       toposort.array(files, toSort)
         .reverse()
         .forEach(function (file) {
-          this.emit(&#x27;data&#x27;, file);
+          this.emit('data', file);
         }.bind(this));
 
-      this.emit(&#x27;end&#x27;);
+      this.emit('end');
     });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -217,3 +210,4 @@ it with gulp.src(..)&#x27;));
     ]
 </div>
 </div>
+</body></html>
