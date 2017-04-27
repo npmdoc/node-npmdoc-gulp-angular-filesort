@@ -1,4 +1,7 @@
-# api documentation for  [gulp-angular-filesort (v1.1.1)](https://github.com/klei/gulp-angular-filesort)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-angular-filesort.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-angular-filesort) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-angular-filesort.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-angular-filesort)
+# npmdoc-gulp-angular-filesort
+
+#### basic api documentation for  [gulp-angular-filesort (v1.1.1)](https://github.com/klei/gulp-angular-filesort)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-angular-filesort.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-angular-filesort) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-angular-filesort.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-angular-filesort)
+
 #### Automatically sort AngularJS app files depending on module definitions and usage
 
 [![NPM](https://nodei.co/npm/gulp-angular-filesort.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/gulp-angular-filesort)
@@ -64,7 +67,8 @@
     "scripts": {
         "test": "mocha -R spec test/*_test.js"
     },
-    "version": "1.1.1"
+    "version": "1.1.1",
+    "bin": {}
 }
 ```
 
